@@ -1,5 +1,5 @@
 ## Проверка
-1. SSH  
+### 1. SSH  
 Подключение в локальной сети 
 ```shell
 ssh -i ~/.ssh/id_ed25519 -p 22222 'student@192.168.1.142'
@@ -15,7 +15,12 @@ Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
 permitted by applicable law.
 student@mysc:~$
 ```
-2. iptables  
+После изменения /etc/motd
+```text
+Linux mysc 6.1.0-39-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.148-1 (2025-08-26) x86_64
+Hello, very nice to meet you!
+```
+### 2. iptables  
 nmap не получает ответ из-за правил iptables  
 ```shell
 nmap -p 22222 192.168.1.142
@@ -39,7 +44,7 @@ PORT      STATE SERVICE
 
 Nmap done: 1 IP address (1 host up) scanned in 4.06 seconds
 ```
-4. Логирование и анализ  
+### 4. Логирование и анализ  
 Команда для получения логов  
 ```shell
 sudo journalctl -u ssh
